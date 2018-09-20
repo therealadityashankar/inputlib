@@ -1,8 +1,6 @@
 """
-handle python inputs with ease!
-"""
 import typing
-
+"""
 
 class PInput:
     """creates a parsable input class
@@ -88,7 +86,7 @@ class PInput:
         self.ask()
 
 
-def get_conformation():
+def get_confirmation():
     """
     returns True if the user type in yes, False if the user types in No
     """
