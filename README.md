@@ -1,5 +1,6 @@
 # inputlib: handle python inputs with ease!
 
+:metal:
 ## intro
 
 ### brief example
@@ -25,13 +26,14 @@ bar :)
 * class: `inputlib.PInput`
 * def: `inputlib.getConformation`
 
+:eyes:
 ## Docs
 
 ### class `inputlib.PInput`
 
 #### params:
 
-* optional
+* *optional*
   * **foretext** - *default:* "::>>> " - the text that comes before what the user inputs
 
 #### class methods:
