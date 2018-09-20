@@ -30,6 +30,8 @@ bar :)
 ## Docs :v:
 
 ### class `inputlib.PInput`
+creates a parsable input class
+
 #### :sake: params:
 
 optional
@@ -55,3 +57,7 @@ optional
 **:watermelon: `ask`** - asks with an input
 
 #### params: none
+
+### def `get_conformation`
+conforms *yes/no* with the user
+#### :sake: params: none
