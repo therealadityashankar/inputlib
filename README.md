@@ -37,12 +37,12 @@ bar :)
 #### class methods:
 * **add_keyword** - adds a usable keyword to the class
 
-  * ##### params:
+  * params:
 
-  * ###### required:
-    * **keyword** - *string* - adds a keyword to the class
-    * **keyword_callback** - *callable (function, class, if something else callable exists)* - function to be executed when the keyword is entered
-    * **callback_args** - *tuple* - callback function args
-    * **callback_kwargs** - *dict* - callback function keyword args
+    * required:
+      * **keyword** - *string* - adds a keyword to the class
+      * **keyword_callback** - *callable (function, class, if something else callable exists)* - function to be executed when the keyword is entered
+      * **callback_args** - *tuple* - callback function args
+      * **callback_kwargs** - *dict* - callback function keyword args
 
 
