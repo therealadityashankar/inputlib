@@ -39,7 +39,7 @@ optional
 * **foretext** - *default:* "::>>> " - the text that comes before what the user inputs
 <br>
 
-#### :pineapple: methods:
+#### :sake: methods:
 
 **:watermelon: `add_keyword`** - adds a usable keyword to the class
 
