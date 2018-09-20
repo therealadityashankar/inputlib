@@ -1,6 +1,7 @@
 """
 handle python inputs with ease!
 """
+import typing
 
 
 class PInput:
@@ -51,9 +52,9 @@ class PInput:
 
     def add_keyword(self,
                     keyword: str,
-                    keyword_callback=None,
-                    callback_args=(),
-                    callback_kwargs={}):
+                    keyword_callback: typing.Callable = None,
+                    callback_args: tuple = (),
+                    callback_kwargs: dict = {}):
         """adds a matchable keyword to be used when the ask function
            called
            see module help for an example
