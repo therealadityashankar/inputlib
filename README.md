@@ -34,9 +34,9 @@ creates a parsable input class
 
 #### :sake: params:
 
-optional
+**optional**
 
-* **foretext** - *default:* "::>>> " - the text that comes before what the user inputs
+`foretext` - *default:* "::>>> " - the text that comes before what the user inputs
 <br>
 
 #### :sake: methods:
