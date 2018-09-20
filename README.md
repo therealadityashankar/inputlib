@@ -57,8 +57,8 @@ optional
 **:watermelon: `ask`** - asks with an input
 
 #### params: none
-
 <br>
+
 ### def `get_conformation`
 conforms *yes/no* with the user
 #### :sake: params: none
