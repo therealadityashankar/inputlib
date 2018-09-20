@@ -1,4 +1,5 @@
 # inputlib: handle python inputs with ease!
+cause the input() command is not good enough!
 
 ## Intro :metal:
 
