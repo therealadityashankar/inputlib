@@ -35,6 +35,7 @@ creates a parsable input class
 #### :sake: params:
 
 optional
+
 * **foretext** - *default:* "::>>> " - the text that comes before what the user inputs
 <br>
 
@@ -45,6 +46,7 @@ optional
 #### params:
 
 required
+
 **keyword** - *string* - adds a keyword to the class
 **keyword_callback** - *callable (function, class, if something else callable exists)* - function to be executed when the keyword is entered
     
