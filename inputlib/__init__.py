@@ -1,10 +1,9 @@
 """
-pInput class, makes using the "input" keyword easier
-
+handle python inputs with ease!
 """
 
 
-class pInput:
+class PInput:
     """creates a parsable input class
     example:
     >>> import inputlib
@@ -13,7 +12,7 @@ class pInput:
     ...     print("bar :)")
     ...
     >>>
-    >>> inp = inputlib.pInput()
+    >>> inp = inputlib.PInput()
     >>> inp.add_keyword("foo", foo)
     >>>
     >>> inp.ask()
@@ -34,7 +33,7 @@ class pInput:
     >>>
 
     changing the input starting chars example (cotd..):
-    >>> ainp = inputlib.pInput("#> ")
+    >>> ainp = inputlib.PInput("#> ")
     >>> ainp.add_keyword("bar", foo)
     >>>
     >>> ainp.ask()
@@ -92,13 +91,14 @@ def get_conformation():
     """
     returns True if the user type in yes, False if the user types in No
     """
-    inp = pInput("#> ")
+    inp = PInput("#> ")
 
     def yes():
         return True
 
     def no():
         return False
-    inp.add_keyword("yes")
-    inp.add_keyword("no")
+
+    inp.add_keyword("yes", yes)
+    inp.add_keyword("no", no)
     return inp.ask()
