@@ -45,13 +45,13 @@ creates a parsable input class
 
 #### params:
 
-**required**
+##### **required**
 
 `keyword` - *string* - adds a keyword to the class
 
 `keyword_callback` - *callable (function, class, if something else callable exists)* - function to be executed when the keyword is entered
     
-**optional**
+##### **optional**
 
 `callback_args` - *tuple* - callback function args
 
