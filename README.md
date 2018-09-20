@@ -58,6 +58,7 @@ optional
 
 #### params: none
 
+<br>
 ### def `get_conformation`
 conforms *yes/no* with the user
 #### :sake: params: none
