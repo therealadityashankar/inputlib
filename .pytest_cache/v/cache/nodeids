@@ -1,4 +1,4 @@
 [
-  "tests/test_PInput.py::TestClass::()::test_PInput_1",
-  "tests/test_PInput.py::TestClass::()::test_PInput_2"
+  "test_PInput.py::TestClass::()::test_PInput_1",
+  "test_PInput.py::TestClass::()::test_PInput_2"
 ]
