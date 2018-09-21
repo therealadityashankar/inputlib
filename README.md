@@ -37,7 +37,7 @@ creates a parsable input class
 
 **optional**
 
-`foretext` - *default:* "::>>> " - the text that comes before what the user inputs
+`foretext` - *string* - *default:* "::>>> " - the text that comes before what the user inputs
 <br>
 
 #### :sake: methods:
