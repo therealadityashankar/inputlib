@@ -1,5 +1,6 @@
 # inputlib: handle python inputs with ease!
 cause the input() command is not good enough!
+[![Coverage Status](https://coveralls.io/repos/github/therealadityashankar/inputlib/badge.svg?branch=master)](https://coveralls.io/github/therealadityashankar/inputlib?branch=master)
 
 ## Intro :metal:
 
