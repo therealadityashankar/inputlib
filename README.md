@@ -1,6 +1,9 @@
 # inputlib: handle python inputs with ease!
 cause the input() command is not good enough!
 
+
+[![Coverage Status](https://coveralls.io/repos/github/therealadityashankar/inputlib/badge.svg?branch=master)](https://coveralls.io/github/therealadityashankar/inputlib?branch=master)
+[![Build Status](https://travis-ci.com/therealadityashankar/inputlib.svg?branch=master)](https://travis-ci.com/therealadityashankar/inputlib)
 ## Intro :metal:
 
 ### a brief example
@@ -37,7 +40,7 @@ creates a parsable input class
 
 **optional**
 
-`foretext` - *default:* "::>>> " - the text that comes before what the user inputs
+`foretext` - *string* - *default:* "::>>> " - the text that comes before what the user inputs
 <br>
 
 #### :sake: methods:
