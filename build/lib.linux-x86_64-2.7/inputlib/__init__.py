@@ -3,6 +3,7 @@ make python inputs easier!
 """
 import typing
 
+
 class PInput:
     """creates a parsable input class
     example:
@@ -69,7 +70,7 @@ class PInput:
         kw = input(self.foretext)
 
         # fallback in case the keyword does not exist
-        fallbackdef = (self.fallback, (kw), {})
+        fallbackdef = (self.fallback, (kw,), {})
 
         function, args, kwargs = self.functions.get(kw,
                                                     fallbackdef)
@@ -77,14 +78,23 @@ class PInput:
 
     def fallback(self, kw):
         """fallback in case ask does not return anything"""
-        print(f"bad keyword: {kw}")
-        print(f"retry")
-        print()
-        print(f"available keywords:")
-        for keyword in self.functions:
-            print(keyword)
-
+        print(self.fallback_text.format(kw))
         self.ask()
+
+    @property
+    def fallback_text(self):
+        text = """
+bad keyword {}
+retry
+
+available functions:
+"""
+        for keyword in self.functions:
+            text += keyword
+
+        return text
+
+        return text
 
 
 def get_confirmation():
