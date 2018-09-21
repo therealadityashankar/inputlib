@@ -27,7 +27,7 @@ bar :)
 ### available tools
 
 * class: `inputlib.PInput`
-* def: `inputlib.getConformation`
+* def: `inputlib.get_conformation`
 
 <br>
 
