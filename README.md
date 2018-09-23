@@ -100,8 +100,13 @@ creates a parsable input class
 **:watermelon: `ask`** - asks with an input
 
 #### params: none
+
 <br>
 
+**watermelon: `get_input`** - gets user inputted keyword, raises an **PInputInputNotEnteredExeception** if user data has not been entered before this function was called.
+
+#### params: none
+<br>
 ### def `get_confirmation`
 confirms *yes/no* with the user
 #### :sake: params: none
