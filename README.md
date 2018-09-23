@@ -80,7 +80,7 @@ creates a parsable input class
 
 #### :sake: methods:
 
-** :watermelon: `add_keyword`** - adds a usable keyword to the class
+**:watermelon: `add_keyword`** - adds a usable keyword to the class
 
 #### params:
 
@@ -103,7 +103,7 @@ creates a parsable input class
 
 <br>
 
-**watermelon: `get_input`** - gets user inputted keyword, raises an **PInputInputNotEnteredExeception** if user data has not been entered before this function was called.
+**:watermelon: `get_input`** - gets user inputted keyword, raises an **PInputInputNotEnteredExeception** if user data has not been entered before this function was called.
 
 #### params: none
 <br>
