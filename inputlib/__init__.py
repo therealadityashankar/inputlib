@@ -86,6 +86,7 @@ class PInput:
         self.input_asked = True
 
         if keyword in self.keywords:
+            self.retrieved_input = keyword
             if keyword in self.functions:
                 function, args, kwargs = self.functions[keyword]
                 return function(*args, **kwargs)
@@ -107,9 +108,9 @@ class PInput:
         text += "bad keyword {}" + "\n"
         text += "retry" + "\n"
         text += "\n"
-        text += "available functions"
+        text += "available functions" + "\n"
 
-        for keyword in self.functions:
+        for keyword in self.keywords:
             text += f'{keyword}\n'
 
         return text
@@ -117,7 +118,7 @@ class PInput:
     def get_input(self):
         """returns if user has input an input, raises an error otherwise"""
         if self.input_asked:
-            return self.retrieved_input()
+            return self.retrieved_input
         else:
             raise PInputInputNotEnteredExeception()
 
@@ -131,6 +132,7 @@ def get_confirmation():
     inp.add_keyword("yes")
     inp.add_keyword("no")
 
+    inp.ask()
     ans = inp.get_input()
 
     if ans == "yes":

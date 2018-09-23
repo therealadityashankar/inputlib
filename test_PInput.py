@@ -28,9 +28,17 @@ class TestClass:
     def test_PInput_2(self):
         """PInput parameter check"""
         inp = inputlib.PInput(")>")
-        inp.add_keyword("mock_inp_1", mock_function_foo)
-        inputlib.input = mock_input("mock_inp_1", ")>")
+        inp.add_keyword("mock_inp_2", mock_function_foo)
+        inputlib.input = mock_input("mock_inp_2", ")>")
         assert inp.ask() == (1, 2)
+
+    def test_PInput_3(self):
+        """PInput non-function return check"""
+        inp = inputlib.PInput(")>")
+        inp.add_keyword("happy boy")
+        inp.add_keyword("other happy boy")
+        inp.ask()
+        inp.get
 
     def teardown_method(self):
         inputlib.input = input
