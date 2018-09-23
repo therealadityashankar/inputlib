@@ -3,6 +3,19 @@ cause the `input()` command is not good enough!
 
 ## Intro :metal:
 
+### installation
+
+symbolic
+```
+pip3 install -a .
+```
+
+proper
+```
+pip3 install .
+```
+
+
 ### a brief example
 
 ```
@@ -19,6 +32,19 @@ cause the `input()` command is not good enough!
 ::>>> foo
 bar :)
 >>>
+```
+
+### another brief example
+```
+>>> inp = inputlib.PInput(")>")
+>>> inp.add_keyword("foo")
+>>> inp.add_keyword("bar")
+>>>
+>>> inp = inp.get_input()
+>>> if input == "foo":
+>>>     print("hey foo guy!")
+>>> else input == "bar":
+>>>     print("hey bar guy!")
 ```
 
 ### available tools
@@ -40,6 +66,13 @@ creates a parsable input class
 `foretext` - *string* - *default:* "::>>> " - the text that comes before what the user inputs
 <br>
 
+#### :sake: properties:
+
+**:orange: `keywords`** - list of keywords
+**:orange: `functions`** - dict of functions, args, and kwargs key is keyword name
+**:orange: `foretext`** - text that comes before when the user inputs text
+**:orange: `input_asked`** - has the input asked ?
+**:orange: `retrieved_input`** - which input was called last
 #### :sake: methods:
 
 **:watermelon: `add_keyword`** - adds a usable keyword to the class
@@ -50,10 +83,9 @@ creates a parsable input class
 
 `keyword` - *string* - adds a keyword to the class
 
-`keyword_callback` - *callable (function, class, if something else callable exists)* - function to be executed when the keyword is entered
-    
 ##### **optional**
 
+`keyword_callback` - *callable (function, class, if something else callable exists)* - function to be executed when the keyword is entered    
 `callback_args` - *tuple* - callback function args
 
 `callback_kwargs` - *dict* - callback function keyword args
