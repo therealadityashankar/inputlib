@@ -69,10 +69,15 @@ creates a parsable input class
 #### :sake: properties:
 
 **:orange: `keywords`** - list of keywords
+
 **:orange: `functions`** - dict of functions, args, and kwargs key is keyword name
+
 **:orange: `foretext`** - text that comes before when the user inputs text
+
 **:orange: `input_asked`** - has the input asked ?
+
 **:orange: `retrieved_input`** - which input was called last
+
 #### :sake: methods:
 
 **:watermelon: `add_keyword`** - adds a usable keyword to the class
