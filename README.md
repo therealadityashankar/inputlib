@@ -74,7 +74,7 @@ creates a parsable input class
 
 **:orange: `foretext`** - text that comes before when the user inputs text
 
-**:orange: `input_asked`** - has the input asked ?
+**:orange: `input_asked`** - was the input asked ? (using the ask() def)
 
 **:orange: `retrieved_input`** - which input was called last
 
