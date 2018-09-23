@@ -80,7 +80,7 @@ creates a parsable input class
 
 #### :sake: methods:
 
-**:watermelon: `add_keyword`** - adds a usable keyword to the class
+** :watermelon: `add_keyword`** - adds a usable keyword to the class
 
 #### params:
 
