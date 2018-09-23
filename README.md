@@ -107,6 +107,7 @@ creates a parsable input class
 
 #### params: none
 <br>
+
 ### def `get_confirmation`
 confirms *yes/no* with the user
 #### :sake: params: none
