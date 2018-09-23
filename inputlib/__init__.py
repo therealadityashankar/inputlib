@@ -4,6 +4,10 @@ make python inputs easier!
 import typing
 
 
+class PInputInputNotEnteredExeception(Exception):
+    pass
+
+
 class PInput:
     """creates a parsable input class
     example:
@@ -46,9 +50,15 @@ class PInput:
         """initializes the pInput class
            see class help for an example
         """
+        self.keywords = []
+
+        # self.functions is a *dict* with
+        # key: keyword, value: (function, args, kwargs)
         self.functions = {}
+
         self.foretext = foretext
-        self.answer = None
+        self.input_asked = False
+        self.retrieved_input = None
 
     def add_keyword(self,
                     keyword: str,
@@ -59,42 +69,57 @@ class PInput:
            called
            see module help for an example
            """
-        self.functions[keyword] = (keyword_callback,
-                                   callback_args,
-                                   callback_kwargs)
+
+        self.keywords.append(keyword)
+
+        if keyword_callback is not None:
+            self.functions[keyword] = (keyword_callback,
+                                       callback_args,
+                                       callback_kwargs)
 
     def ask(self):
         """asks for an argument
            see module class for an example
         """
-        kw = input(self.foretext)
+        keyword = input(self.foretext)
 
-        # fallback in case the keyword does not exist
-        fallbackdef = (self.fallback, (kw,), {})
+        self.input_asked = True
 
-        function, args, kwargs = self.functions.get(kw,
-                                                    fallbackdef)
-        return function(*args, **kwargs)
+        if keyword in self.keywords:
+            if keyword in self.functions:
+                function, args, kwargs = self.functions[keyword]
+                return function(*args, **kwargs)
+
+            else:
+                return keyword
+        else:
+            return self.fallback(keyword)
 
     def fallback(self, kw):
         """fallback in case ask does not return anything"""
         print(self.fallback_text.format(kw))
-        self.ask()
+        return self.ask()
 
     @property
     def fallback_text(self):
-        text = """
-bad keyword {}
-retry
+        """text to be displayed on fallback"""
+        text = ""
+        text += "bad keyword {}" + "\n"
+        text += "retry" + "\n"
+        text += "\n"
+        text += "available functions"
 
-available functions:
-"""
         for keyword in self.functions:
-            text += keyword
+            text += f'{keyword}\n'
 
         return text
 
-        return text
+    def get_input(self):
+        """returns if user has input an input, raises an error otherwise"""
+        if self.input_asked:
+            return self.retrieved_input()
+        else:
+            raise PInputInputNotEnteredExeception()
 
 
 def get_confirmation():
@@ -103,12 +128,12 @@ def get_confirmation():
     """
     inp = PInput("#> ")
 
-    def yes():
+    inp.add_keyword("yes")
+    inp.add_keyword("no")
+
+    ans = inp.get_input()
+
+    if ans == "yes":
         return True
-
-    def no():
+    else:
         return False
-
-    inp.add_keyword("yes", yes)
-    inp.add_keyword("no", no)
-    return inp.ask()
