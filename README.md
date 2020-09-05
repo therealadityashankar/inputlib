@@ -1,3 +1,7 @@
+archived, like I've too many projects to maintain in-and-off-itself,
+
+anyway, if you wanna maintain this, contact me at `me@adityashankar.xyz`
+
 # inputlib: handle python inputs with ease!
 cause the `input()` command is not good enough!
 
